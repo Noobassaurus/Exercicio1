@@ -1,0 +1,19 @@
+#!/bin/bash
+
+if [ -d "$1" ] ; then
+    directorio=$1
+else
+    read -p "Bota directorio para listar conteudos" directorio
+
+fi
+
+cd "$directorio"
+
+echo "conteudo:"
+
+ls -la
+
+mkdir -p bakup
+mv *.txt bakup/
+
+
